@@ -1,10 +1,23 @@
+GIT
+  remote: git@github.com:MoodeKehutong/weixin_api.git
+  revision: 3ded067fd4b14099bbbd3aaa462599967eac6dae
+  specs:
+    weixin_api (0.0.1)
+      multi_json (~> 1.10.1)
+      rest-client (~> 1.7.2)
+
 GEM
   remote: https://ruby.taobao.org/
   specs:
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.8)
-    multi_json (1.11.0)
+    mime-types (2.4.3)
+    multi_json (1.10.1)
+    netrc (0.10.3)
+    rest-client (1.7.3)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rubyzip (1.1.7)
     selenium-webdriver (2.45.0)
       childprocess (~> 0.5)
@@ -18,3 +31,4 @@ PLATFORMS
 
 DEPENDENCIES
   selenium-webdriver
+  weixin_api!
