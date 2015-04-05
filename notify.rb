@@ -1,5 +1,8 @@
 require 'bundler/setup'
 require "weixin_api"
+require 'dotenv'
+
+Dotenv.load
 
 wa = Kehutong::WeixinApi.new(app_id: ENV['APP_ID'],\
                              app_secret: ENV['APP_SECRET'])
