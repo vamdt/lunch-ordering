@@ -1,4 +1,5 @@
 require "selenium-webdriver"
+require "./notify"
 
 url = 'http://www.mikecrm.com/f.php?t=YyD7Dc'
 if ARGV.size < 1
@@ -29,12 +30,14 @@ meat = driver.find_element(:name, 'com2').find_elements(:tag_name, 'label')[meat
 vegatable = driver.find_element(:name, 'com3').find_elements(:tag_name, 'label')[vegatables_rand_no].text
 main = driver.find_element(:name, 'com4').find_elements(:tag_name, 'label')[0].text
 
-# driver.find_element(:css, 'a.f_submitBtn').click
+driver.find_element(:css, 'a.f_submitBtn').click
 
-puts "----#{name}"
-puts meat
-puts vegatable
-puts main
-puts '-----------'
+wait = Selenium::WebDriver::Wait.new(:timeout => 1) # seconds
+wait.until { driver.find_element(:css => "a.f_backBtn") }
+
+lunch = Lunch.new name: name, meat: meat, vegatable: vegatable, main: main
+p lunch 
+Notify.new.deliver lunch
+puts 'over'
 
 driver.quit

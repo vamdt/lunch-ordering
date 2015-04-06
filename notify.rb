@@ -20,5 +20,5 @@ class Notify
   
 end
 
-lunch = Lunch.new name: 'vamdt11', meat: '宫爆鸡丁', vegatable: '酸辣土豆丝', main: '米饭'
-Notify.new.deliver lunch
+# lunch = Lunch.new name: 'vamdt11', meat: '宫爆鸡丁', vegatable: '酸辣土豆丝', main: '米饭'
+# Notify.new.deliver lunch
