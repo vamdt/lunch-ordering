@@ -1,0 +1,16 @@
+touser: <%= ENV['TO_USER_OPENID'] %>
+template_id: <%= ENV['TEMPLATE_ID'] %>
+topcolor: '#FFFF00'
+data: 
+  first:
+    value: 新订餐消息
+    color: '#ff0000'
+  keyword1:
+    value: vamdt
+    color: '#000000'
+  keyword2:
+    value: "\n您订了：\n\t宫爆鸡丁\n\t酸辣土豆丝\n\t米饭"
+    color: '#386493'
+  remark:
+    value: <%= Time.now %>
+    color: '#0000ff'
