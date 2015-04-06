@@ -11,6 +11,7 @@ GEM
   specs:
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
+    chronic (0.10.2)
     dotenv (2.0.1)
     ffi (1.9.8)
     mime-types (2.4.3)
@@ -20,17 +21,20 @@ GEM
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     rubyzip (1.1.7)
-    selenium-webdriver (2.45.0)
+    selenium-webdriver (2.44.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     websocket (1.2.1)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   dotenv
-  selenium-webdriver
+  selenium-webdriver (~> 2.44.0)
   weixin_api!
+  whenever

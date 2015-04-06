@@ -12,7 +12,8 @@ puts "Welcome #{name}"
 meat_rand_no = rand(11)
 vegatables_rand_no = rand(6)
 
-driver = Selenium::WebDriver.for :chrome, :switches => %w[--disable-popup-blocking --disable-translate]
+# driver = Selenium::WebDriver.for :chrome, :switches => %w[--disable-popup-blocking --disable-translate]
+driver = Selenium::WebDriver.for :phantomjs
 driver.navigate.to url
 
 name_el = driver.find_element(:name, 'com1').find_element(:tag_name, 'input')
