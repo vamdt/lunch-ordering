@@ -6,10 +6,10 @@ data:
     value: 新订餐消息
     color: '#ff0000'
   keyword1:
-    value: vamdt
+    value: <%= lunch.name %>
     color: '#000000'
   keyword2:
-    value: "\n您订了：\n\t宫爆鸡丁\n\t酸辣土豆丝\n\t米饭"
+    value: "<%= lunch.to_s %>"
     color: '#386493'
   remark:
     value: <%= Time.now %>

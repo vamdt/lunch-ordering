@@ -8,7 +8,7 @@ class Lunch
   end
 
   def to_s
-    "\n您订了：\n\t#{meat}\n\t#{vegatable}\n\t#{main}"
+    "\\n您订了：\\n\\t#{meat}\\n\\t#{vegatable}\\n\\t#{main}\\n\\t:)"
   end
 
 end
